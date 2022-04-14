@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/regular_padding"
+    android:layout_height="match_parent"
+    tools:context=".BassarShopFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bassarshop_text"
+        android:textStyle="bold"
+        android:layout_marginTop="@dimen/regular_margin_three"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Bassarshop" />
+
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:id="@+id/cart_button"
+        android:layout_marginRight="@dimen/regular_margin"
+        app:layout_constraintTop_toTopOf="@id/bassarshop_text"
+        app:layout_constraintBottom_toBottomOf="@id/bassarshop_text"
+        app:layout_constraintRight_toLeftOf="@+id/search_button" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/search_button"
+        app:layout_constraintTop_toTopOf="@id/cart_button"
+        app:layout_constraintBottom_toBottomOf="@id/cart_button" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tous"
+        android:id="@+id/all_text"
+        app:layout_constraintRight_toLeftOf="@+id/accessory_text"
+        app:layout_constraintTop_toBottomOf="@id/bassarshop_text"
+        android:layout_marginTop="@dimen/regular_margin_three"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Accessoires"
+        app:layout_constraintLeft_toRightOf="@id/all_text"
+        android:id="@+id/accessory_text"
+        app:layout_constraintRight_toRightOf="@+id/board_text"
+        app:layout_constraintTop_toTopOf="@id/all_text" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tableaux"
+        app:layout_constraintTop_toTopOf="@id/all_text"
+        app:layout_constraintLeft_toRightOf="@id/accessory_text"
+        android:id="@+id/board_text"
+        app:layout_constraintRight_toLeftOf="@+id/sculpture_text" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Sculptures"
+        app:layout_constraintTop_toTopOf="@id/all_text"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/sculpture_text"
+        app:layout_constraintLeft_toRightOf="@id/board_text" />
+
+    <View
+        android:layout_width="30dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/all_text"
+        android:layout_marginTop="@dimen/regular_margin"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/recycler_view"
+        app:layout_constraintTop_toBottomOf="@id/all_text"
+        android:layout_marginTop="@dimen/regular_margin_three"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/regular_padding"
+    android:layout_height="match_parent"
+    tools:context=".TermsOfUseFragment">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/terms_of_use"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Conditions d'utilisations" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="fitCenter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/terms_of_use"
+        android:id="@+id/back_button"
+        app:layout_constraintBottom_toBottomOf="@id/terms_of_use" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/regular_image_height"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/terms_of_use"
+        android:id="@+id/illustration_image"
+        android:layout_marginTop="@dimen/regular_margin_five" />
+
+    
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Généraux"
+        android:id="@+id/all_text"
+        app:layout_constraintRight_toLeftOf="@+id/accessory_text"
+        app:layout_constraintTop_toBottomOf="@id/illustration_image"
+        android:layout_marginTop="@dimen/regular_margin_three"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Boutique"
+        app:layout_constraintLeft_toRightOf="@id/all_text"
+        android:id="@+id/accessory_text"
+        app:layout_constraintRight_toRightOf="@+id/board_text"
+        app:layout_constraintTop_toTopOf="@id/all_text" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Crowfunding"
+        app:layout_constraintTop_toTopOf="@id/all_text"
+        app:layout_constraintLeft_toRightOf="@id/accessory_text"
+        android:id="@+id/board_text"
+        app:layout_constraintRight_toLeftOf="@+id/sculpture_text" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Social"
+        app:layout_constraintTop_toTopOf="@id/all_text"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/sculpture_text"
+        app:layout_constraintLeft_toRightOf="@id/board_text" />
+
+    <View
+        android:layout_width="30dp"
+        android:layout_height="2dp"
+        android:background="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/all_text"
+        android:layout_marginTop="@dimen/regular_margin"
+        app:layout_constraintLeft_toLeftOf="@id/accessory_text" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:id="@+id/text"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@id/all_text"
+        android:layout_marginTop="@dimen/regular_margin_two" />
+    
+</androidx.constraintlayout.widget.ConstraintLayout>
